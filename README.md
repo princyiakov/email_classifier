@@ -87,8 +87,7 @@ Performed different data cleaning techniques for NLP.
 
 #### Data Visualization
 
-Lets understand the distribution of data through visualization 
+Every Data has a story to tell . Lets understand the story behind this one !
 
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![](https://...Dark.png)  |  ![](https://...Ocean.png)
+![Target data disribution](https://github.com/princyiakov/email_classifier/blob/main/images/target_distribution.PNG)
+
