@@ -16,7 +16,6 @@ This is exactly what we are trying to achieve via this project . Making your lif
   - [How did we solve the issue](#how-did-we-solve-the-issue)
      - [Data Cleaning](#data-cleaning)
      - [Data Visualization](#data-visualization)
-     - [Feature Engineering](#feature-engineering)
      - [Model Selection](#model-selection)
     
 <!-- tocstop -->
@@ -127,10 +126,12 @@ Every Data has a story to tell . Let's understand the story behind this one !
 - Lets see what hours maximum mails are sent. I bined the Hours in 4 timeslots .
   We see that maximum mails were sent during afternoon working hours, followed by morning working hours
   
-  00:00 hrs - 08:00 hrs = 0
-  08:01 hrs - 12:00 hrs = 1
-  12:01 hrs - 18:00 hrs = 2
-  18:01 hrs - 23:59 hrs = 3
+  Time slot             | Value
+  ----------------------|---
+  00:00 hrs - 08:00 hrs | 0
+  08:01 hrs - 12:00 hrs | 1
+  12:01 hrs - 18:00 hrs | 2
+  18:01 hrs - 23:59 hrs | 3
   
   ![Theme Monthstart_VS_middle data disribution](https://github.com/princyiakov/email_classifier/blob/main/images/timeslot_distribution.PNG)
 
@@ -169,4 +170,12 @@ WordCloud for theme regulations and regulators           |  Word Cloud for theme
 
 WordCloud for theme trip reports           |  
 ![12](https://github.com/princyiakov/email_classifier/blob/main/images/wc12.PNG)   
+
+
+A quick sneak peek into the top 40 common words in the mail corpus :
+
+![most_common_words](https://github.com/princyiakov/email_classifier/blob/main/images/most_common_words.PNG)   
+
+
+#### Model Selection
 
