@@ -31,21 +31,22 @@ https://github.com/princyiakov/email_classifier/blob/main/Email%20Classifier.ipy
 
 ### Understanding Data 
 
-Classification labels:
+Classification labels based on the Label encode value assigned:
 
-    1. `regulations and regulators (includes price caps)`
-    2. `internal projects -- progress and strategy`
-    3. `company image -- current`
-    4. `company image -- changing / influencing`
-    5. `political influence / contributions / contacts`
-    6. `california energy crisis / california politics`
-    7. `internal company policy`
-    8. `internal company operations`
-    9. `alliances / partnerships`
-    10. `legal advice`
-    11. `talking points`
-    12. `meeting minutes`
-    13. `trip reports`
+    [0] `company image -- current`
+    [1] `alliances / partnerships`
+    [2] `california energy crisis / california politics`
+    [3] `company image -- changing / influencing`
+    [4] `internal company operations`
+    [5] `internal company policy`
+    [6] `internal projects -- progress and strategy`
+    [7] `legal advice`
+    [8] `meeting minutes`
+    [9] `political influence / contributions / contacts`
+    [10] `regulations and regulators (includes price caps)`
+    [11] `talking points`
+    [12] `trip reports`
+
 
 Mail Sample : 
 ```2;internal company operations;"Message-ID: <8687721.1075852656109.JavaMail.evans@thyme>
@@ -102,7 +103,8 @@ Every Data has a story to tell . Let's understand the story behind this one !
   but only four data for "trip reports" ! 
   ![Target data disribution](https://github.com/princyiakov/email_classifier/blob/main/images/target_distribution.PNG)
 
-- MAILS DISTRIBUTION BASED ON MONTHS : Maximum mails have been sent in the month of July and least in January
+- MAILS DISTRIBUTION BASED ON MONTHS : Maximum mails have been sent in the month of July and least in January. 
+  
   ![Monthly data disribution](https://github.com/princyiakov/email_classifier/blob/main/images/month_distribution.PNG)
 
 - What were they discussing during these two months ?! Lets see !
@@ -111,3 +113,10 @@ Every Data has a story to tell . Let's understand the story behind this one !
   January was relaxed and more about understanding the future plans as the mails were "internal projects -- progress and strategy" and "legal advice" 
   
   ![Theme Month data disribution](https://github.com/princyiakov/email_classifier/blob/main/images/theme_for_month_distribution.PNG)
+
+- Lets dig deeper! In a month, what is the distribution, start, middle and end . 
+
+    ![Theme Monthstart_VS_middle data disribution](https://github.com/princyiakov/email_classifier/blob/main/images/theme_for_month_start_vs_middle_distribution.PNG)
+
+    ![Theme Monthend data disribution](https://github.com/princyiakov/email_classifier/blob/main/images/theme_for_month_end.PNG)
+
