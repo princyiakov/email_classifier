@@ -140,7 +140,7 @@ Every Data has a story to tell . Let's understand the story behind this one !
 WordCloud for theme 0           |  Word Cloud for theme 1
 :-------------------------:|:-------------------------:
   ![0](https://github.com/princyiakov/email_classifier/blob/main/images/wc0.PNG)
-  | ![1](https://github.com/princyiakov/email_classifier/blob/main/images/wc1.PNG)
+  |![1](https://github.com/princyiakov/email_classifier/blob/main/images/wc1.PNG)
 
 WordCloud for theme 2           |  Word Cloud for theme 3
 :-------------------------:|:-------------------------:
