@@ -114,9 +114,67 @@ Every Data has a story to tell . Let's understand the story behind this one !
   
   ![Theme Month data disribution](https://github.com/princyiakov/email_classifier/blob/main/images/theme_for_month_distribution.PNG)
 
-- Lets dig deeper! In a month, what is the distribution, start, middle and end . 
+- Lets dig deeper! In a month, what is the distribution, start, middle and end .
+  
+  Beginning of the month and end of the month looks a bit similar with more focus on "california energy crisis / california politics"
+  and "regulations and regulators ". By the end of the month a little more focus on "internal company policy" and "internal projects -- progress and strategy"
+  We see a rise in company mails regarding "internal company operations" in the middle of the month .
 
     ![Theme Monthstart_VS_middle data disribution](https://github.com/princyiakov/email_classifier/blob/main/images/theme_for_month_start_vs_middle_distribution.PNG)
 
     ![Theme Monthend data disribution](https://github.com/princyiakov/email_classifier/blob/main/images/theme_for_month_end.PNG)
+
+- Lets see what hours maximum mails are sent. I bined the Hours in 4 timeslots .
+  We see that maximum mails were sent during afternoon working hours, followed by morning working hours
+  
+  00:00 hrs - 08:00 hrs = 0
+  08:01 hrs - 12:00 hrs = 1
+  12:01 hrs - 18:00 hrs = 2
+  18:01 hrs - 23:59 hrs = 3
+  
+  ![Theme Monthstart_VS_middle data disribution](https://github.com/princyiakov/email_classifier/blob/main/images/timeslot_distribution.PNG)
+
+
+- Since we are doing NLP implementation, lets see which words compose the moset in each theme. 
+
+WordCloud for theme 0           |  Word Cloud for theme 1
+:-------------------------:|:-------------------------:
+  ![0](https://github.com/princyiakov/email_classifier/blob/main/images/wc0.PNG)
+  |  !  ![1](https://github.com/princyiakov/email_classifier/blob/main/images/wc1.PNG)
+
+WordCloud for theme 2           |  Word Cloud for theme 3
+:-------------------------:|:-------------------------:
+  ![2](https://github.com/princyiakov/email_classifier/blob/main/images/wc2.PNG)
+  |  !  ![3](https://github.com/princyiakov/email_classifier/blob/main/images/wc3.PNG)
+
+
+WordCloud for theme 4           |  Word Cloud for theme 5
+:-------------------------:|:-------------------------:
+  ![4](https://github.com/princyiakov/email_classifier/blob/main/images/wc4.PNG)
+  |  !  ![5](https://github.com/princyiakov/email_classifier/blob/main/images/wc1.PNG)
+
+
+WordCloud for theme 6           |  Word Cloud for theme 7
+:-------------------------:|:-------------------------:
+  ![6](https://github.com/princyiakov/email_classifier/blob/main/images/wc6.PNG)
+  |  !  ![7](https://github.com/princyiakov/email_classifier/blob/main/images/wc7.PNG)
+
+
+
+WordCloud for theme 8           |  Word Cloud for theme 9
+:-------------------------:|:-------------------------:
+  ![8](https://github.com/princyiakov/email_classifier/blob/main/images/wc8.PNG)
+  |  !  ![9](https://github.com/princyiakov/email_classifier/blob/main/images/wc9.PNG)
+
+
+WordCloud for theme 10          |  Word Cloud for theme 11
+:-------------------------:|:-------------------------:
+  ![10](https://github.com/princyiakov/email_classifier/blob/main/images/wc10.PNG)
+  |  !  ![11](https://github.com/princyiakov/email_classifier/blob/main/images/wc11.PNG)
+
+
+WordCloud for theme 12           |  
+:-------------------------:|:-------------------------:
+  ![12](https://github.com/princyiakov/email_classifier/blob/main/images/wc12.PNG)
+  | 
 
