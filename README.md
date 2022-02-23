@@ -140,37 +140,37 @@ Every Data has a story to tell . Let's understand the story behind this one !
 WordCloud for theme 0           |  Word Cloud for theme 1
 :-------------------------:|:-------------------------:
   ![0](https://github.com/princyiakov/email_classifier/blob/main/images/wc0.PNG)
-  |  !  ![1](https://github.com/princyiakov/email_classifier/blob/main/images/wc1.PNG)
+  | ![1](https://github.com/princyiakov/email_classifier/blob/main/images/wc1.PNG)
 
 WordCloud for theme 2           |  Word Cloud for theme 3
 :-------------------------:|:-------------------------:
   ![2](https://github.com/princyiakov/email_classifier/blob/main/images/wc2.PNG)
-  |  !  ![3](https://github.com/princyiakov/email_classifier/blob/main/images/wc3.PNG)
+  | ![3](https://github.com/princyiakov/email_classifier/blob/main/images/wc3.PNG)
 
 
 WordCloud for theme 4           |  Word Cloud for theme 5
 :-------------------------:|:-------------------------:
   ![4](https://github.com/princyiakov/email_classifier/blob/main/images/wc4.PNG)
-  |  !  ![5](https://github.com/princyiakov/email_classifier/blob/main/images/wc1.PNG)
+  | ![5](https://github.com/princyiakov/email_classifier/blob/main/images/wc1.PNG)
 
 
 WordCloud for theme 6           |  Word Cloud for theme 7
 :-------------------------:|:-------------------------:
   ![6](https://github.com/princyiakov/email_classifier/blob/main/images/wc6.PNG)
-  |  !  ![7](https://github.com/princyiakov/email_classifier/blob/main/images/wc7.PNG)
+  | ![7](https://github.com/princyiakov/email_classifier/blob/main/images/wc7.PNG)
 
 
 
 WordCloud for theme 8           |  Word Cloud for theme 9
 :-------------------------:|:-------------------------:
   ![8](https://github.com/princyiakov/email_classifier/blob/main/images/wc8.PNG)
-  |  !  ![9](https://github.com/princyiakov/email_classifier/blob/main/images/wc9.PNG)
+  | ![9](https://github.com/princyiakov/email_classifier/blob/main/images/wc9.PNG)
 
 
 WordCloud for theme 10          |  Word Cloud for theme 11
 :-------------------------:|:-------------------------:
   ![10](https://github.com/princyiakov/email_classifier/blob/main/images/wc10.PNG)
-  |  !  ![11](https://github.com/princyiakov/email_classifier/blob/main/images/wc11.PNG)
+  | ![11](https://github.com/princyiakov/email_classifier/blob/main/images/wc11.PNG)
 
 
 WordCloud for theme 12           |  
