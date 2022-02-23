@@ -1,5 +1,12 @@
 # Email Classifier
-This code aims at classifies emails by themes .
+Remember how we have to click and classify our work mails based on themes ? 🤔 Dont we all get lost at what theme should 
+the mail be classified into ? And worst when we have to retrive the important mails and we forgot to put them in a folder incase we missed to assign a theme !  🤕 
+
+What if I tell you that we can automate this ? 
+
+All you need is some data and some NLP ! 	🎊
+
+This is exactly what we are trying to achieve via this project . Making your life simple one project at a time 	😄
 
 <!-- toc -->
 
@@ -18,7 +25,9 @@ This code aims at classifies emails by themes .
 Let us understand in detail about the data
 
 ### Notebook File 
-https://github.com/princyiakov/credit-card-default/blob/main/credit-card-default.ipynb
+
+Here is a quick view of my journey to achieve the goal :
+https://github.com/princyiakov/email_classifier/blob/main/Email%20Classifier.ipynb
 
 ### Understanding Data 
 
@@ -87,7 +96,18 @@ Performed different data cleaning techniques for NLP.
 
 #### Data Visualization
 
-Every Data has a story to tell . Lets understand the story behind this one !
+Every Data has a story to tell . Let's understand the story behind this one !
 
-![Target data disribution](https://github.com/princyiakov/email_classifier/blob/main/images/target_distribution.PNG)
+- TARGET THEME DISTRIBUTION : As we see, the data is not equally distributed . We have ample amount of data to train for "reguations and regulators" 
+  but only four data for "trip reports" ! 
+  ![Target data disribution](https://github.com/princyiakov/email_classifier/blob/main/images/target_distribution.PNG)
 
+- MAILS DISTRIBUTION BASED ON MONTHS : Maximum mails have been sent in the month of July and least in January
+  ![Monthly data disribution](https://github.com/princyiakov/email_classifier/blob/main/images/month_distribution.PNG)
+
+- What were they discussing during these two months ?! Lets see !
+  July was more about "regulations and regulators (includes price caps)" and "california energy crisis / california politics"
+  
+  January was relaxed and more about understanding the future plans as the mails were "internal projects -- progress and strategy" and "legal advice" 
+  
+  ![Theme Month data disribution](https://github.com/princyiakov/email_classifier/blob/main/images/theme_for_month_distribution.PNG)
