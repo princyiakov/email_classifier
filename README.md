@@ -137,37 +137,36 @@ Every Data has a story to tell . Let's understand the story behind this one !
 
 - Since we are doing NLP implementation, lets see which words compose the moset in each theme. 
 
-WordCloud for theme 0           |  Word Cloud for theme 1
+WordCloud for theme company image -- current           |  Word Cloud for theme alliances / partnerships
 :-------------------------:|:-------------------------:
   ![0](https://github.com/princyiakov/email_classifier/blob/main/images/wc0.PNG)|![1](https://github.com/princyiakov/email_classifier/blob/main/images/wc1.PNG)
 
-WordCloud for theme 2           |  Word Cloud for theme 3
+WordCloud for theme california energy crisis / california politics           |  Word Cloud for theme company image -- changing / influencing
 :-------------------------:|:-------------------------:
   ![2](https://github.com/princyiakov/email_classifier/blob/main/images/wc2.PNG)  | ![3](https://github.com/princyiakov/email_classifier/blob/main/images/wc3.PNG)
 
 
-WordCloud for theme 4           |  Word Cloud for theme 5
+WordCloud for theme internal company operations           |  Word Cloud for theme internal company policy
 :-------------------------:|:-------------------------:
   ![4](https://github.com/princyiakov/email_classifier/blob/main/images/wc4.PNG)  | ![5](https://github.com/princyiakov/email_classifier/blob/main/images/wc1.PNG)
 
 
-WordCloud for theme 6           |  Word Cloud for theme 7
+WordCloud for theme internal projects -- progress and strategy           |  Word Cloud for theme legal advice
 :-------------------------:|:-------------------------:
   ![6](https://github.com/princyiakov/email_classifier/blob/main/images/wc6.PNG) | ![7](https://github.com/princyiakov/email_classifier/blob/main/images/wc7.PNG)
 
 
 
-WordCloud for theme 8           |  Word Cloud for theme 9
+WordCloud for theme meeting minutes           |  Word Cloud for theme political influence / contributions / contacts
 :-------------------------:|:-------------------------:
   ![8](https://github.com/princyiakov/email_classifier/blob/main/images/wc8.PNG) | ![9](https://github.com/princyiakov/email_classifier/blob/main/images/wc9.PNG)
 
 
-WordCloud for theme 10          |  Word Cloud for theme 11
+WordCloud for theme regulations and regulators           |  Word Cloud for theme talking points
 :-------------------------:|:-------------------------:
   ![10](https://github.com/princyiakov/email_classifier/blob/main/images/wc10.PNG)  | ![11](https://github.com/princyiakov/email_classifier/blob/main/images/wc11.PNG)
 
 
-WordCloud for theme 12           |  
-:-------------------------:|:-------------------------:
-![12](https://github.com/princyiakov/email_classifier/blob/main/images/wc12.PNG)  | 
+WordCloud for theme trip reports           |  
+![12](https://github.com/princyiakov/email_classifier/blob/main/images/wc12.PNG)   
 
