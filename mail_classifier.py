@@ -1,19 +1,11 @@
-import string
-import datetime
 import email
 import os
 import argparse
 import pickle
 
 import pandas as pd
-import numpy as np
-from sklearn import preprocessing
-from sklearn.feature_extraction.text import TfidfVectorizer
 
-from sklearn.feature_extraction.text import TfidfTransformer, ENGLISH_STOP_WORDS
-from sklearn.metrics import accuracy_score, confusion_matrix, precision_score, f1_score
-
-from utils import nltk, get_text_from_email, clean_data, transform_date
+from utils import get_text_from_email, clean_data, transform_date
 
 
 def main():
@@ -54,16 +46,29 @@ def main():
     emails_df['Text'] = emails_df.apply(lambda x: clean_data(x['Text'], 'lem'),
                                         axis=1)
     text_df = emails_df[['Text']]
-    v = TfidfVectorizer(max_features=3000)
-    X = v.fit_transform(text_df['Text'])
-    transformedtext_df = pd.DataFrame(X.toarray(), columns=v.get_feature_names())
 
     num_df = transform_date(emails_df[['Date']])
 
-    df = pd.concat([transformedtext_df, num_df], axis=1)
-    print(df)
+    df = pd.concat([text_df, num_df], axis=1)
     prediction = model.predict(df)
     output = int(prediction[0])
+
+    themes = {
+        0: "company image -- current"
+        , 1: "alliances / partnerships"
+        , 2: "california energy crisis / california politics"
+        , 3: "company image -- changing / influencing"
+        , 4: "internal company operations"
+        , 5: "internal company policy"
+        , 6: "internal projects -- progress and strategy"
+        , 7: "legal advice"
+        , 8: "meeting minutes"
+        , 9: "political influence / contributions / contacts"
+        , 10: "regulations and regulators (includes price caps)"
+        , 11: "talking points"
+        , 12: "trip reports"
+    }
+    print("Mail belongs to : ", themes[output])
 
 
 if __name__ == '__main__':

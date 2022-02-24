@@ -179,3 +179,27 @@ A quick sneak peek into the top 40 common words in the mail corpus :
 
 #### Model Selection
 
+Classify the emails I explored the following models :
+- SVC
+- KNeighborsClassifier
+- MultinomialNB
+- DecisionTreeClassifier
+- LogisticRegression
+- RandomForestClassifier
+- AdaBoostClassifier
+- ExtraTreesClassifier
+- GradientBoostingClassifier
+- XGBClassifier
+
+Out of which SVC provided better results on fitting on Text values solely . 
+GradientBoostingClassifier performed better on introducing Datetime element .
+
+However, the model performance needs to be improved drastically for being capable of production.
+
+Follow up for improving the model : 
+- Gather More data
+- Implement Over Sampling 
+- Implementation of BERT transformers.I have already initiated the implementation:
+  https://github.com/princyiakov/email_classifier/blob/main/Bert_Model.ipynb .
+  
+  I need to implement the slicing of long sentences as bert accommodates only 512 token size .
