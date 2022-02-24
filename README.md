@@ -203,3 +203,6 @@ Follow up for improving the model :
   https://github.com/princyiakov/email_classifier/blob/main/Bert_Model.ipynb .
   
   I need to implement the slicing of long sentences as bert accommodates only 512 token size .
+
+Follow up for the project : 
+- create a front end 
