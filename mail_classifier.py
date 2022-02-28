@@ -5,7 +5,9 @@ import pickle
 
 import pandas as pd
 
-from utils import get_text_from_email, clean_data, transform_date
+from utils import get_text_from_email, clean_data, get_day_part
+from sklearn.feature_extraction.text import TfidfVectorizer
+
 
 
 def main():
@@ -13,7 +15,7 @@ def main():
     print("Your Working Directory is : ", current_dir)
     parser = argparse.ArgumentParser(description='Email Theme Classifier')
     parser.add_argument('--model_file', type=str,
-                        default=os.path.join(current_dir, 'gbdt_model.pkl'), required=False,
+                        default=os.path.join(current_dir, 'svc_model.pkl'), required=False,
                         help='location of the model file')
     parser.add_argument('--input_file', type=str,
                         default=os.path.join(current_dir, 'test_dataset.csv'), required=True,
@@ -43,14 +45,19 @@ def main():
     emails_df['Text'] = emails_df['Folder'] + " " + emails_df[
         'Subject'] + " " + emails_df['Content']
 
-    emails_df['Text'] = emails_df.apply(lambda x: clean_data(x['Text'], 'lem'),
-                                        axis=1)
-    text_df = emails_df[['Text']]
+    emails_df['Date'] = pd.to_datetime(emails_df['Date'], infer_datetime_format=True, utc=True)
+    emails_df['day_part'] = emails_df.Date.dt.day_name() + " " + emails_df.Date.dt.hour.apply(
+        get_day_part) + " " + emails_df.Date.dt.month_name()
 
-    num_df = transform_date(emails_df[['Date']])
+    emails_df['Folder'] = emails_df['Folder'].apply(lambda x: x.split('\\')[1])
 
-    df = pd.concat([text_df, num_df], axis=1)
-    prediction = model.predict(df)
+    emails_df['Text'] = emails_df['day_part'] + " " + emails_df['Folder'] + " " + emails_df[
+        'Subject'] + " " + emails_df['Content']
+
+    emails_df['Text'] = emails_df.apply(lambda x: clean_data(x['Text'], 'lem'), axis=1)
+
+
+    prediction = model.predict(emails_df['Text'])
     output = int(prediction[0])
 
     themes = {
