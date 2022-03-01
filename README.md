@@ -30,8 +30,7 @@ Here is a quick view of my journey to achieve the goal :
 https://github.com/princyiakov/email_classifier/blob/main/Bert_Email_Classifier.ipynb
 
 2. Using SVC and other models:
-https://github.com/princyiakov/email_classifier/blob/main/Email%20Classifier.ipynb
-
+https://github.com/princyiakov/email_classifier/blob/main/Email%20Classifier_Attempt2.ipynb
 ### Understanding Data 
 
 Classification labels based on the Label encode value assigned:
