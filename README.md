@@ -26,6 +26,10 @@ Let us understand in detail about the data
 ### Notebook File 
 
 Here is a quick view of my journey to achieve the goal :
+1. Using BERT Model: 
+https://github.com/princyiakov/email_classifier/blob/main/Bert_Email_Classifier.ipynb
+
+2. Using SVC and other models:
 https://github.com/princyiakov/email_classifier/blob/main/Email%20Classifier.ipynb
 
 ### Understanding Data 
