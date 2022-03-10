@@ -1,13 +1,16 @@
 import email
 
 import pandas as pd
+from sklearn import preprocessing
+
 from utils import get_day_part, get_text_from_email
 
 
 class EmailClassifier:
-    def __init__(self, dataframe, text_flag=False):
+    def __init__(self, dataframe, text_flag=False, train_flag=False):
         self.df = dataframe
         self.text_flag = text_flag
+        self.train_flag = train_flag
 
     def transform_df(self):
         """
@@ -28,10 +31,12 @@ class EmailClassifier:
         self.df['Content'] = list(map(get_text_from_email, messages))
         self.df = self.df.rename(columns={'X-Folder': 'Folder'})
 
+        # Remove blank data
         self.df = self.df.drop(
             self.df.query('Date == "" | Subject == "" | Content == "" | Folder ==""').index)
         self.df.reset_index(drop=True, inplace=True)  # To reset the index of the dropped rows
 
+        # Take the first element in folder
         self.df['Folder'] = self.df['Folder'].apply(lambda x: x.split('\\')[1])
         self.df['Date'] = pd.to_datetime(self.df['Date'], infer_datetime_format=True, utc=True)
         if self.text_flag:
@@ -39,12 +44,24 @@ class EmailClassifier:
                 get_day_part) + "" + self.df.Date.dt.month_name()
             self.df['Text'] = self.df['Date'] + " " + self.df['Folder'] + " " + self.df[
                 'Subject'] + " " + self.df['Content']
-            self.df = self.df[['Text', 'Target']].copy()
+            if self.train_flag:
+                le = preprocessing.LabelEncoder()
+                self.df['Target'] = le.fit_transform(self.df.Target)
+                self.df = self.df[['Text', 'Target']].copy()
+
+            else:
+                self.df = self.df[['Text']].copy()
         else:
             self.df['Text'] = self.df['Folder'] + " " + self.df['Subject'] + " " + self.df[
                 'Content']
             self.df['Month'] = self.df.Date.dt.month
             self.df['Day'] = self.df.Date.dt.day
             self.df['Hour'] = self.df.Date.dt.hour
-            self.df = self.df[['Day', 'Month', 'Hour', 'Text', 'Target']].copy()
+            if self.train_flag:
+                le = preprocessing.LabelEncoder()
+                self.df['Target'] = le.fit_transform(self.df.Target)
+                self.df = self.df[['Day', 'Month', 'Hour', 'Text', 'Target']].copy()
+
+            else:
+                self.df = self.df[['Day', 'Month', 'Hour', 'Text']].copy()
         return self.df

@@ -24,7 +24,7 @@ args = parser.parse_args()
 
 emails_df = pd.read_csv(args.input_file, sep=';')
 
-model = EmailClassifier(emails_df)
+model = EmailClassifier(emails_df, train_flag=True)
 emails_df = model.transform_df()
 
 X = emails_df.iloc[:, :4]
